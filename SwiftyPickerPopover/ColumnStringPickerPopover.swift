@@ -174,7 +174,7 @@ extension ColumnStringPickerPopover: UIPickerViewDelegate{
         let fontSize: CGFloat = fontSizes?[component] ?? kDefaultFontSize
         let font: UIFont = fonts?[component] ?? UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.regular)
         let fontColor: UIColor = fontColors?[component] ?? kDefaultFontColor
-        let attributedTitle = NSAttributedString(string: title, attributes: [NSAttributedStringKey.font: font, NSAttributedStringKey.foregroundColor: fontColor])
+        let attributedTitle = NSAttributedString(string: title, attributes: [NSAttributedString.Key.font: font, NSAttributedString.Key.foregroundColor: fontColor])
         label.attributedText = attributedTitle
         
         label.textAlignment = .center

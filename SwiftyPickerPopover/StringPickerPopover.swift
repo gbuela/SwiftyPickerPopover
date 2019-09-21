@@ -226,7 +226,7 @@ extension StringPickerPopover: UIPickerViewDelegate {
         
         let title: String = displayStringFor?(choices[row]) ?? choices[row]
         let font: UIFont = self.font ?? UIFont.systemFont(ofSize: fontSize, weight: UIFont.Weight.regular)
-        let attributedTitle = NSAttributedString(string: title, attributes: [NSAttributedStringKey.font: font, NSAttributedStringKey.foregroundColor: fontColor])
+        let attributedTitle = NSAttributedString(string: title, attributes: [NSAttributedString.Key.font: font, NSAttributedString.Key.foregroundColor: fontColor])
 
         attributedResult.append(attributedTitle)
         return attributedResult
