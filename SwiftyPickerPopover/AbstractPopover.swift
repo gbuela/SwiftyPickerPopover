@@ -34,6 +34,8 @@ open class AbstractPopover: NSObject {
     private(set) var backgroundColor: UIColor?
     /// tintColor of contentViewController
     private(set) var tintColor: UIColor?
+    /// Content background color
+    private(set) var contentBackgroundColor: UIColor?
     
     /// Size of th popover
     private(set) var size:(width: CGFloat?, height: CGFloat?)?
@@ -62,6 +64,11 @@ open class AbstractPopover: NSObject {
     /// - Returns: Self
     open func setArrowColor(_ color:UIColor)->Self{
         self.backgroundColor = color
+        return self
+    }
+    
+    open func setContentBackgroundColor(_ color:UIColor)->Self{
+        self.contentBackgroundColor = color
         return self
     }
 
@@ -113,6 +120,7 @@ open class AbstractPopover: NSObject {
         
         // configure StringPickerPopoverViewController
         let contentVC = configureContentViewController(navigationController: navigationController)
+        contentVC?.view.backgroundColor = contentBackgroundColor
         navigationController.popoverPresentationController?.delegate = contentVC
         
         navigationController.popoverPresentationController?.backgroundColor = self.backgroundColor ?? self.baseViewController?.view.backgroundColor
