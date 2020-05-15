@@ -5,6 +5,7 @@ Pod::Spec.new do |s|
   s.summary      = "A more convenient way to display a popover with a built-in picker, on iPhone/iPad of iOS9+."
   s.homepage     = "https://github.com/hsylife/SwiftyPickerPopover"
   s.license      = "MIT"
+  s.swift_version    = '5.0'
   s.author             = { "Yuta Hoshino" => "ythshn@gmail.com" }
   s.platform     = :ios, "9.0"
   # s.ios.deployment_target = "9.0"
